@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cart-hero" style="color:#333">
+            <h1>Shopping Cart</h1>
+            <p>Select your car and calculate your total cost, including VAT.</p>
+        </section>
+
+        <section class="destination-list">
+            <article class="destination-item" style="height: 325px;">
+                <img src="./img/Audi Sedan Car.png" alt="Sedan">
+                <h2>Rent Cost: $50</h2>
+                <p>Audi Sedan Vehicle</p>
+            </article>
+            <article class="destination-item" style="height: 325px;">
+                <img src="./img/SUV.png" alt="SUV">
+                <h2>Rent Cost: $80</h2>
+                <p>SUV</p>
+            </article>
+            <article class="destination-item" style="height: 325px;">
+                <img src="./img/Van.jpeg" alt="Van">
+                <h2>Rent Cost: $100</h2>
+                <p>Van</p>
+            </article>
+            <article class="destination-item" style="height: 325px;">
+                <img src="./img/Sport Car.jpg" alt="Sport Car">
+                <h2>Rent Cost: $150</h2>
+                <p>Sport Car</p>
+            </article>
+            <article class="destination-item" style="height: 325px;">
+                <img src="./img/Luxury Car.png" alt="Luxury Car">
+                <h2>Rent Cost: $200</h2>
+                <p>Luxury Car</p>
+            </article>
+        </section>
+
+        <section class="cart-form">
+            <h2>Book Your Car</h2>
+            <form id="cartForm">
+                <div class="form-group">
+                    <label for="car">Choose a Car:</label>
+                    <select id="car" name="car" required>
+                        <option value="">-- Select a Car --</option>
+                        <option value="sedan" data-price="50">Sedan - $50/day</option>
+                        <option value="suv" data-price="80">SUV - $80/day</option>
+                        <option value="van" data-price="100">Van - $100/day</option>
+                        <option value="sports" data-price="150">Sports Car - $150/day</option>
+                        <option value="luxury" data-price="200">Luxury Car - $200/day</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="days">Number of Days:</label>
+                    <input type="number" id="days" name="days" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="vat">VAT (15%):</label>
+                    <input type="text" id="vat" name="vat" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="subtotal">Subtotal:</label>
+                    <input type="text" id="subtotal" name="subtotal" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="total">Grand Total:</label>
+                    <input type="text" id="total" name="total" readonly>
+                </div>
+                <button type="button" class="btn" id="calculateBtn">Calculate</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rent A Car Company</p>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
